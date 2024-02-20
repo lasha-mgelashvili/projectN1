@@ -1,0 +1,310 @@
+/* basic styles */
+
+section {
+    padding: 4rem 0 3rem;
+}
+img {
+    width: 100%;
+}
+body {
+    height: 100%;
+    position: relative;
+    color: #fbfeff;
+    background: #171b44;
+}
+
+/* Header  */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(29 35 82 / 90%);
+    z-index: 200;
+}
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo {
+    font-family: 'Anta';
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: #fbfeff;
+    font-size: 1.9rem;
+}
+.logo span {
+    color: #ff4d55;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+}
+.nav-link {
+    font-family: 'Orbitron';
+    position: relative;
+    font-size: 1rem;
+    color: #fbfeff;
+    font-weight: 500;
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background: #ff4d55; 
+}
+.nav-link:hover::after {
+    width: 100%;
+    transition: 0.3s;
+}
+.login-btn {
+    font-family: 'Poppins';
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fbfeff;
+    background: #ff4d55;
+    font-weight: 500;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.login-btn .bx {
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.login-btn:hover {
+    background: #f8646c;
+    transition: 0.3s;
+}
+/* Drop Login */
+.drop-login {
+    position: absolute;
+    top: 115%;
+    right: 0;
+    width: 231px;
+    height: auto;
+    background: #1d2352;
+    box-shadow: 4px 4px 10px 2 px rgb(23 27 38 / 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.3s;
+}
+.drop-login .drop-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+.drop-login .drop-item:Hover {
+    background: #ff4d55;
+    transition: 0.3s;
+}
+.drop-login .drop-item a {
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fbfeff;
+}
+.drop-login .drop-item span {
+    font-family: 'Poppins';
+    font-size: 0.9rem; 
+    font-weight: 400; 
+    color: #fbfeff;
+}
+.drop-login.drop-login-open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: 0.4s;
+}
+/* Burger Bar */
+.burger {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+.burgerbar span {
+    display: block;
+    background: #fbfeff;
+    height: 2.5px;
+    width: 25px;
+    transition: 0.3s;
+}
+.burgerbar {
+    margin-right: 50px;
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fbfeff;
+}
+@media( max-width:768px) {
+    .burgerbar {
+        display: block;
+    }
+    .burgerbar.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .burgerbar.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: 0.5s;
+
+    }
+    .burgerbar.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: 0.5s;
+    }
+}
+/* Home */
+.home-slide {
+    min-height: 640px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.slide-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+.slide-title {
+    font-family: 'Protest Revolution';
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+}
+.container {
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+.slide-title-span {
+    font-family: 'Orbitron';
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ff4d55;
+}
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(74deg, 
+    rgb(23, 27, 68, 80%) 50%,
+    rgb(23, 27, 68, 14%)
+    );
+    z-index: 200;
+}
+.swiper-pagination-bullet{
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 0.2rem !important;
+    background: #fbfeff !important;
+    opacity: 1 !important;
+} 
+.swiper-pagination-bullet-active {
+    width: 1.5rem !important;
+    background: #ff4d55 !important;
+}
+.home-text {
+    z-index: 202;
+}
+.slide-title::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 44px;
+    height: 3px;
+    background: #ff4d55;
+}
+.slide-description {
+    max-width: 450px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+    font-family: 'Rubik';
+}
+.btn {
+    font-family: 'Poppins';
+    display: inline-flex;
+     background: #ff4d55;
+    padding: 10px 16px;
+    color: #fbfeff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #f8646c;
+    transition: 0.3s;
+}
+/* Services */
+.services-title {
+    font-family: 'Orbitron';
+    position: relative;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.services-title::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -4px;
+    width: 44px;
+    height: 3px;
+    background: #ff4d55;
+}
+.services-content {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.5rem;
+}
+.ser-box-title {
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.ser-box p {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 0.9rem;
+    max-width: 300px;
+    width: 100%;
+}
+.ser-box {
+    display: grid;
+    flex-direction: column;
+    row-gap: 0.4rem;
+
+}
