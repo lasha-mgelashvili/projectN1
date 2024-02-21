@@ -14,4 +14,20 @@ burger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
+// Game Info Read More
 
+// function toggleVisibility(dotsId, moreId, btnId) {
+//   let dots = document.getElementById(dotsId);
+//   let moreText = document.getElementById(moreId);
+//   let btnText = document.getElementById(btnId);
+
+//   if (dots.style.display === "none") {
+//     dots.style.display = "inline";
+//     btnText.innerHTML = "See Game Info";
+//     moreText.style.display = "none";
+//   } else {
+//     dots.style.display = "none";
+//     btnText.innerHTML = "Hide";
+//     moreText.style.display = "inline";
+//   }
+// }
