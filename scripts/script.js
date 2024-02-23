@@ -14,20 +14,66 @@ burger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-// Game Info Read More
 
-// function toggleVisibility(dotsId, moreId, btnId) {
-//   let dots = document.getElementById(dotsId);
-//   let moreText = document.getElementById(moreId);
-//   let btnText = document.getElementById(btnId);
+// Main Swiper
 
-//   if (dots.style.display === "none") {
-//     dots.style.display = "inline";
-//     btnText.innerHTML = "See Game Info";
-//     moreText.style.display = "none";
-//   } else {
-//     dots.style.display = "none";
-//     btnText.innerHTML = "Hide";
-//     moreText.style.display = "inline";
-//   }
-// }
+var swiper = new Swiper(".home", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+// Accordion
+
+const AccordionItems = document.querySelectorAll(".accordion-item");
+
+AccordionItems.forEach((item) => {
+  const accordionHeader = item.querySelector(".accordion-header");
+
+  accordionHeader.addEventListener("click", () => {
+    const openItem = document.querySelector(".accordion-open");
+    toggleItem(item);
+
+    if (openItem && openItem !== item) {
+      toggleItem(openItem);
+    }
+  });
+});
+
+const toggleItem = (item) => {
+  const accordionContent = item.querySelector(".accordion-content");
+  if (item.classList.contains("accordion-open")) {
+    accordionContent.removeAttribute("style");
+    item.classList.remove("accordion-open");
+  } else {
+    accordionContent.style.height = accordionContent.scrollHeight + "px";
+    item.classList.add("accordion-open");
+  }
+};
+
+// Control Swiper
+
+    var swiper = new Swiper(".control-images", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });

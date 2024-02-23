@@ -235,7 +235,8 @@ header {
 .home-text {
     z-index: 202;
 }
-.slide-title::after {
+.slide-title::after,
+.faq-title::after {
     content: '';
     position: absolute;
     top: -8px;
@@ -302,6 +303,9 @@ header {
     font-weight: 400;
     font-size: 0.9rem;
     line-height: 20px;
+}
+.ser-box span {
+    color: #ff4d55;
 }
 .ser-box {
     display: flex;
@@ -387,4 +391,150 @@ header {
 }
 .game-price span {
     color: #0bd2d4;
+}
+/* F.A.Q */
+.faq {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+.faq-text {
+    flex: 1 1 17rem;
+}
+.faq-img {
+    flex: 1 1 17rem;
+}
+.faq-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Orbitron';
+}
+.faq-text p {
+    font-size: 0.9rem;
+    text-align: justify;
+    margin: 2rem 0 1.5rem;
+    font-family: 'Poppins';
+}
+.faq-accordion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+.accordion-text {
+    flex: 1 1 17rem;
+}
+.accordion-container {
+    flex: 1 1 17rem;
+}
+.accordion-text h2 {
+    position: relative;
+    font-size: 1.8rem;
+    font-family: 'Orbitron';
+    font-weight: 600;
+    letter-spacing: 3px;
+
+}
+.accordion-text p {
+    margin: 0.5rem 0 1.5rem;
+    font-family: 'Poppins';
+}
+.accordion-container {
+    display: grid;
+    gap: 1.5rem;
+}
+.accordion-item {
+    border-radius: 0.25rem;
+    background-color: #1d2352;
+    padding: 10px;
+}
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.accordion-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'Rubik';
+    transition: 0.3s;
+}
+.accordion-icon {
+    margin: 1rem 0 1rem;
+    font-size: 1.3rem;
+    color: #fbfeff;
+    transition: 0.3s;
+}
+.accordion-answer {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: 'Poppins';
+    line-height: 1.5rem;
+    margin-left: 0.5rem;
+}
+.accordion-content {
+    border-radius: 0.25rem;
+    background: #171b44;
+    border-left: 4px solid #ff4d55;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.accordion-open .accordion-icon {
+    transform: rotate(45deg);
+}
+.accordion-open .accordion-title {
+    font-weight: 600;
+}
+/* Control Panel */
+.control {
+    background: #1d2352;
+}
+.control-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    background: #1d2352;
+}
+.control-text {
+    flex: 1 1 17rem;
+}
+.control-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Rubik';
+}
+.control-text p {
+    font-size: 0.9rem;
+    font-family: 'Poppins';
+    margin: 1rem 0 0.8rem;
+}
+.control-text .bx {
+    color: #ff4d55;
+}
+.spec-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+.spec-box span {
+    font-size: 0.9rem;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.control-images {
+    flex: 1 1 17rem;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 24px !important;
+    font-weight: 600;
+    color: #fbfeff;
 }
